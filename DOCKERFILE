@@ -1,0 +1,11 @@
+# Use the lightweight Alpine Linux image
+FROM alpine:latest
+
+# Accept an argument at build time
+ARG NAME=Captain
+
+# Set environment variable
+ENV NAME=${NAME}
+
+# Set the command to print "Hello, [NAME]!" and exit
+CMD echo "Hello, ${NAME}!"
